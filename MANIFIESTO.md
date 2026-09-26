@@ -1,0 +1,174 @@
+# Manifiesto de producto — Misión Software · ULP
+
+## Propósito
+
+Crear una experiencia web breve y memorable que permita a estudiantes de secundaria descubrir, mediante el juego, que estudiar Software es aprender a resolver problemas, diseñar experiencias y crear tecnología útil.
+
+No buscamos evaluar conocimientos previos ni dar una clase. Buscamos despertar curiosidad y abrir una conversación en el stand.
+
+## Público y contexto
+
+- Estudiantes de secundaria, con niveles muy diversos de familiaridad con programación.
+- Uso desde el celular personal, mediante código QR.
+- Visita al stand de pocos minutos, generalmente en un ambiente ruidoso y con conectividad variable.
+- Debe poder jugarse de forma individual; acompañantes o docentes pueden mirar sin necesidad de intervenir.
+
+## Promesa de experiencia
+
+En menos de dos minutos, una persona entiende el objetivo, toma decisiones, ve una consecuencia y descubre qué concepto de Software acaba de usar.
+
+La interfaz debe ser amable, directa y visual. El texto explica lo indispensable; las acciones enseñan el resto.
+
+## Alcance de la primera versión
+
+Una web estática, responsive y liviana con:
+
+1. Una portada que permite elegir desafío.
+2. Tres microjuegos independientes.
+3. Una pantalla final por desafío con explicación corta y conexión con la carrera.
+4. Insignias guardadas localmente para quien complete los tres retos.
+5. Una pantalla final de “Misión completada” que invite a acercarse al equipo de la carrera.
+
+No incluye registro, ranking público, chat, analytics con datos personales, login ni backend.
+
+## Desafíos iniciales
+
+### 1. Programá un robot
+
+**Idea que comunica:** un programa es una secuencia precisa de instrucciones; los bucles ayudan a resolver repeticiones.
+
+**Mecánica:** completar una pequeña lista de instrucciones —avanzar, girar y repetir— para llevar un robot hasta su meta en una grilla corta.
+
+**Duración objetivo:** 60–90 segundos.
+
+**Cierre:** “Acabas de crear un algoritmo: una serie de pasos para resolver un problema.”
+
+### 2. Salvá una página web
+
+**Idea que comunica:** una web no aparece de golpe: el navegador solicita y organiza recursos como HTML, CSS, JavaScript, fuentes e imágenes.
+
+**Mecánica:** elegir qué recursos debe priorizar un navegador para lograr que una página sea útil y cargue rápido. La interfaz muestra la página armándose y da retroalimentación de la decisión.
+
+**Duración objetivo:** 60–120 segundos.
+
+**Cierre:** “Diseñar software también implica decidir qué llega primero y cómo se siente una experiencia.”
+
+### 3. Protegé una cuenta
+
+**Idea que comunica:** la seguridad digital se construye con decisiones cotidianas y pensamiento crítico.
+
+**Mecánica:** una secuencia breve de situaciones: detectar un mensaje sospechoso, fortalecer una contraseña y activar segundo factor.
+
+**Duración objetivo:** 60–90 segundos.
+
+**Cierre:** “La ciberseguridad protege a las personas, sus datos y los sistemas que usan todos los días.”
+
+## Principios de diseño
+
+- **Celular primero:** acciones grandes, una mano, texto breve y contraste alto.
+- **Cero fricción:** sin instalación, cuenta ni permiso especial.
+- **Resultado inmediato:** cada decisión debe tener una reacción visible, no sólo una respuesta correcta o incorrecta.
+- **No punitivo:** el error es parte del juego; siempre debe poder reintentarse rápido.
+- **Accesible:** tipografía legible, contraste suficiente, contenido navegable por teclado y sin depender sólo del color.
+- **Liviano:** primera carga ideal menor a 2 MB; sin videos pesados ni fuentes remotas imprescindibles.
+- **Compartible:** cada final debe ser claro en una captura de pantalla, pero sin exigir compartirla.
+
+## Arquitectura propuesta
+
+Usar HTML, CSS y JavaScript nativos. El sitio debe funcionar sin un framework y poder desplegarse como sitio estático en Vercel.
+
+```text
+/
+├── index.html                 # selector de desafíos
+├── desafio/
+│   ├── robot/index.html
+│   ├── web/index.html
+│   └── seguridad/index.html
+├── css/
+│   ├── base.css
+│   └── challenges.css
+├── js/
+│   ├── shared.js              # navegación, insignias, utilidades
+│   └── challenges/
+│       ├── robot.js
+│       ├── dispatcher.js
+│       └── seguridad.js
+└── assets/
+    ├── icons/
+    └── sounds/
+```
+
+Las insignias y el progreso se guardan únicamente con `localStorage` en el dispositivo. No se debe incluir ningún dato identificable.
+
+## Roadmap
+
+### Fase 0 — Identidad y contenido
+
+- Definir nombre visible, paleta y recursos de marca autorizados por la ULP.
+- Validar los textos de cierre y llamada a la acción con docentes de la carrera.
+- Decidir QR general y códigos QR individuales por desafío.
+
+**Listo cuando:** existe una guía visual mínima y textos definitivos de una pantalla por desafío.
+
+### Fase 1 — Esqueleto navegable
+
+- Crear portada, navegación y rutas de los tres desafíos.
+- Implementar sistema local de insignias.
+- Aplicar diseño responsive base y estados de carga/error/reinicio.
+
+**Listo cuando:** desde un teléfono se puede entrar, elegir un desafío, terminarlo de forma simulada y volver al selector.
+
+### Fase 2 — Juego del robot
+
+- Construir grilla, comandos y animación de ejecución.
+- Diseñar tres niveles cortos con dificultad gradual.
+- Probar que se entienda sin instrucciones largas.
+
+**Listo cuando:** al menos cinco personas pueden completarlo sin ayuda externa en menos de dos minutos.
+
+### Fase 3 — Dispatcher de recursos web
+
+- Representar solicitudes de recursos y una vista previa de una página.
+- Crear decisiones claras de prioridad y retroalimentación visual.
+- Evitar una simulación técnicamente compleja: importa la intuición, no reproducir un navegador real.
+
+**Listo cuando:** el visitante comprende que una web se compone de recursos con distintos roles y prioridades.
+
+### Fase 4 — Ciberseguridad
+
+- Crear tres decisiones cortas basadas en escenarios reconocibles.
+- Revisar los mensajes para que sean correctos, prácticos y no alarmistas.
+- Incorporar reinicio rápido y explicación final.
+
+**Listo cuando:** cada escenario transmite una práctica concreta de cuidado digital.
+
+### Fase 5 — Prueba de stand y despliegue
+
+- Probar en teléfonos Android e iPhone, con 4G y Wi-Fi.
+- Observar a estudiantes reales sin darles instrucciones y registrar dónde dudan.
+- Corregir texto, tamaño de controles y tiempos.
+- Conectar el repositorio a Vercel y generar los QR.
+
+**Listo cuando:** los desafíos cargan bien en celular, el recorrido dura menos de dos minutos y el equipo del stand sabe cómo orientar a quien termina.
+
+## Criterios de aceptación globales
+
+- Compatible con navegadores móviles actuales.
+- Cada desafío puede jugarse en menos de dos minutos.
+- No bloquea el flujo ante una respuesta incorrecta.
+- El botón de reinicio y el regreso a la portada están siempre disponibles.
+- No requiere conexión después de la primera carga, en la medida en que el navegador conserve los recursos en caché.
+- Explica un concepto de la carrera en una frase clara al finalizar.
+- No recolecta datos personales.
+
+## Medición opcional
+
+Antes de añadir métricas, confirmar la política institucional. Si se habilitan, medir solamente eventos anónimos y agregados: desafío iniciado, desafío completado, reinicio y tiempo aproximado. Nunca almacenar nombre, teléfono, correo, ubicación ni identificadores publicitarios.
+
+## Preguntas pendientes
+
+- ¿Se usarán logos oficiales y cuál es la guía de marca vigente?
+- ¿Cuál será la URL final y quién administra el proyecto de Vercel?
+- ¿Se busca mostrar una carrera específica o la oferta de Software en sentido amplio?
+- ¿Habrá conectividad confiable en el stand o conviene prever un plan offline?
+- ¿Qué mensaje o enlace debe aparecer al final para ampliar información sobre inscripción?
