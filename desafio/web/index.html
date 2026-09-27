@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101a35">
+    <meta name="description" content="Salvá una página web: un desafío breve sobre recursos y rendimiento.">
+    <title>Salvá una página web · Misión Software</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/challenges.css">
+    <script src="../../js/shared.js" defer></script>
+  </head>
+  <body class="challenge-web">
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="Misión Software, inicio">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Misión Software</span>
+      </a>
+      <div class="badge-counter"><span data-progress-count>0</span><span aria-hidden="true">/</span><span>3 insignias</span></div>
+    </header>
+
+    <main class="challenge-page" data-current-challenge="web">
+      <nav class="challenge-nav" aria-label="Controles del desafío">
+        <a class="back-link" href="../../index.html"><span aria-hidden="true">←</span> Todas las misiones</a>
+        <button class="back-link" type="button" data-restart-challenge="web"><span aria-hidden="true">↻</span> Reiniciar</button>
+      </nav>
+      <div class="challenge-layout">
+        <section class="challenge-intro" aria-labelledby="challenge-title">
+          <p class="eyebrow">Misión 02 · Experiencia web</p>
+          <h1 id="challenge-title">Salvá una página web</h1>
+          <p>Una web necesita varios recursos para aparecer. Elegí qué debe cargar primero para que sea útil incluso con una conexión lenta.</p>
+          <div class="challenge-meta"><span>Duración: 1–2 min</span><span>Dificultad: inicial</span></div>
+        </section>
+
+        <section class="prototype-card" data-prototype-panel tabindex="-1" aria-labelledby="prototype-title">
+          <div class="prototype-card__visual" aria-hidden="true"><span class="prototype-card__symbol">⌗</span></div>
+          <h2 id="prototype-title">La mecánica llega en la próxima fase</h2>
+          <p>Este botón simula el final del desafío para probar ahora la navegación y el sistema de insignias.</p>
+          <button class="button button--primary" type="button" data-complete-challenge="web">Simular misión completada</button>
+        </section>
+
+        <section class="challenge-success" data-success-panel hidden tabindex="-1" aria-labelledby="success-title">
+          <p class="eyebrow">Insignia obtenida</p>
+          <h2 id="success-title">¡La página está a salvo!</h2>
+          <p>Diseñar software también implica decidir qué llega primero y cómo se siente una experiencia. El navegador combina muchos recursos para construir cada página.</p>
+          <div class="challenge-success__actions">
+            <a class="button button--primary" href="../seguridad/index.html">Siguiente misión <span aria-hidden="true">→</span></a>
+            <a class="button button--secondary" href="../../index.html">Volver al inicio</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

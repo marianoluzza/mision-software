@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101a35">
+    <meta name="description" content="Tres misiones breves para descubrir cómo se crea, mejora y protege el software.">
+    <title>Misión Software</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/challenges.css">
+    <script src="js/shared.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Misión Software, inicio">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Misión Software</span>
+      </a>
+      <div class="badge-counter" aria-label="Progreso de misiones">
+        <span data-progress-count>0</span><span aria-hidden="true">/</span><span>3 insignias</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Tu próxima misión empieza acá</p>
+        <h1 id="page-title">¿Podés pensar<br>como alguien de <em>Software?</em></h1>
+        <p class="hero__lead">Elegí un desafío. En menos de dos minutos vas a tomar decisiones, probar ideas y descubrir qué hay detrás de la tecnología.</p>
+        <a class="button button--primary" href="#misiones">Elegir una misión <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="mission-section" id="misiones" aria-labelledby="mission-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">3 desafíos · 3 ideas</p>
+            <h2 id="mission-title">Elegí tu misión</h2>
+          </div>
+          <p>No hace falta saber programar. Sólo tener curiosidad.</p>
+        </div>
+
+        <div class="mission-grid">
+          <article class="mission-card mission-card--robot" data-challenge-card="robot">
+            <div class="mission-card__topline">
+              <span class="mission-card__number">01</span>
+              <span class="status-pill" data-badge="robot"><span aria-hidden="true">○</span> Pendiente</span>
+            </div>
+            <div class="mission-card__icon icon-robot" aria-hidden="true">⌁</div>
+            <p class="mission-card__topic">Algoritmos</p>
+            <h3>Programá un robot</h3>
+            <p>Ordená instrucciones y encontrá el camino hasta la meta.</p>
+            <div class="mission-card__footer">
+              <span>1–2 min</span>
+              <a class="card-link" href="desafio/robot/index.html" aria-label="Jugar Programá un robot">Jugar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="mission-card mission-card--web" data-challenge-card="web">
+            <div class="mission-card__topline">
+              <span class="mission-card__number">02</span>
+              <span class="status-pill" data-badge="web"><span aria-hidden="true">○</span> Pendiente</span>
+            </div>
+            <div class="mission-card__icon icon-web" aria-hidden="true">⌗</div>
+            <p class="mission-card__topic">Experiencia web</p>
+            <h3>Salvá una página web</h3>
+            <p>Decidí qué debe cargar primero para que una página sea útil y rápida.</p>
+            <div class="mission-card__footer">
+              <span>1–2 min</span>
+              <a class="card-link" href="desafio/web/index.html" aria-label="Jugar Salvá una página web">Jugar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="mission-card mission-card--security" data-challenge-card="seguridad">
+            <div class="mission-card__topline">
+              <span class="mission-card__number">03</span>
+              <span class="status-pill" data-badge="seguridad"><span aria-hidden="true">○</span> Pendiente</span>
+            </div>
+            <div class="mission-card__icon icon-security" aria-hidden="true">◇</div>
+            <p class="mission-card__topic">Ciberseguridad</p>
+            <h3>Protegé una cuenta</h3>
+            <p>Detectá riesgos y tomá buenas decisiones para cuidar tus datos.</p>
+            <div class="mission-card__footer">
+              <span>1–2 min</span>
+              <a class="card-link" href="desafio/seguridad/index.html" aria-label="Jugar Protegé una cuenta">Jugar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-mission" data-mission-complete hidden aria-labelledby="final-title">
+        <span class="final-mission__burst" aria-hidden="true">✦</span>
+        <p class="eyebrow">Las tres insignias son tuyas</p>
+        <h2 id="final-title">¡Misión completada!</h2>
+        <p>Ya pensaste como alguien de Software: creaste, optimizaste y protegiste. Acercate al equipo de la carrera para descubrir qué más podés construir.</p>
+      </section>
+
+      <section class="progress-panel" aria-labelledby="progress-title">
+        <div>
+          <p class="eyebrow">Tu progreso queda en este dispositivo</p>
+          <h2 id="progress-title"><span data-progress-count>0</span> de 3 misiones completadas</h2>
+        </div>
+        <div class="badge-row" aria-label="Insignias obtenidas">
+          <span class="mini-badge mini-badge--robot" data-mini-badge="robot" title="Robot">R</span>
+          <span class="mini-badge mini-badge--web" data-mini-badge="web" title="Web">W</span>
+          <span class="mini-badge mini-badge--security" data-mini-badge="seguridad" title="Seguridad">S</span>
+        </div>
+        <button class="text-button" type="button" data-reset-progress hidden>Reiniciar progreso</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Una experiencia para descubrir la carrera de Software.</p>
+      <p>Sin cuentas · Sin datos personales</p>
+    </footer>
+  </body>
+</html>

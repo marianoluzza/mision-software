@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101a35">
+    <meta name="description" content="Programá un robot: un desafío breve sobre algoritmos e instrucciones.">
+    <title>Programá un robot · Misión Software</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/challenges.css">
+    <script src="../../js/shared.js" defer></script>
+    <script src="../../js/challenges/robot.js" defer></script>
+  </head>
+  <body class="challenge-robot">
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="Misión Software, inicio">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Misión Software</span>
+      </a>
+      <div class="badge-counter"><span data-progress-count>0</span><span aria-hidden="true">/</span><span>3 insignias</span></div>
+    </header>
+
+    <main class="challenge-page" data-current-challenge="robot">
+      <nav class="challenge-nav" aria-label="Controles del desafío">
+        <a class="back-link" href="../../index.html"><span aria-hidden="true">←</span> Todas las misiones</a>
+        <button class="back-link" type="button" data-restart-challenge="robot"><span aria-hidden="true">↻</span> Reiniciar</button>
+      </nav>
+      <div class="challenge-layout">
+        <section class="challenge-intro" aria-labelledby="challenge-title">
+          <p class="eyebrow">Misión 01 · Algoritmos</p>
+          <h1 id="challenge-title">Programá un robot</h1>
+          <p>Una máquina hace exactamente lo que le indicás. Ordená sus pasos, probá tu idea y ayudala a encontrar la salida.</p>
+          <div class="challenge-meta"><span>5 niveles</span><span>Dificultad: creciente</span></div>
+        </section>
+
+        <section class="robot-game" data-prototype-panel tabindex="-1" aria-labelledby="level-title">
+          <div class="robot-game__heading">
+            <div>
+              <p class="robot-game__level" data-level-number>Nivel 1 de 5</p>
+              <h2 id="level-title" data-level-title>Primeros pasos</h2>
+            </div>
+            <div class="level-dots" data-level-dots aria-label="Progreso del desafío"></div>
+          </div>
+          <p class="robot-game__hint" data-level-hint>Llevá el robot hasta la bandera.</p>
+
+          <div class="robot-board" data-board role="grid" aria-label="Tablero del robot"></div>
+
+          <div class="palette-heading">
+            <strong>Instrucciones</strong>
+            <span data-palette-hint>Tocá para agregar</span>
+          </div>
+          <div class="command-palette" data-palette role="group" aria-label="Agregar instrucciones">
+            <button class="command-button" type="button" data-command="forward" aria-label="Agregar Avanzar" title="Avanzar">
+              <span aria-hidden="true">↑</span>
+            </button>
+            <button class="command-button" type="button" data-command="left" aria-label="Agregar giro a la izquierda" title="Girar a la izquierda">
+              <span aria-hidden="true">↶</span>
+            </button>
+            <button class="command-button" type="button" data-command="right" aria-label="Agregar giro a la derecha" title="Girar a la derecha">
+              <span aria-hidden="true">↷</span>
+            </button>
+            <button class="command-button command-button--loop" type="button" data-command="repeat" aria-label="Agregar bucle Repetir" title="Repetir">
+              <span aria-hidden="true">↻</span><small aria-hidden="true">Repetir</small>
+            </button>
+          </div>
+
+          <div class="program-heading">
+            <strong>Tu programa</strong>
+            <span data-slot-count>0 de 3 instrucciones</span>
+          </div>
+          <ol class="robot-program" data-program aria-label="Instrucciones elegidas"></ol>
+
+          <p class="game-feedback" data-feedback role="status" aria-live="polite">Tocá ↑ para crear tu programa.</p>
+
+          <div class="robot-game__actions">
+            <button class="button button--primary" type="button" data-run-program>Ejecutar programa <span aria-hidden="true">▶</span></button>
+            <button class="button button--secondary" type="button" data-clear-program>Limpiar</button>
+            <button class="button button--primary" type="button" data-next-level hidden>Siguiente nivel <span aria-hidden="true">→</span></button>
+            <a class="button button--primary" href="../web/index.html" data-finish-link hidden>Siguiente misión <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
+        <section class="challenge-success" data-success-panel hidden tabindex="-1" aria-labelledby="success-title">
+          <p class="eyebrow">Insignia obtenida</p>
+          <h2 id="success-title">¡Creaste un algoritmo!</h2>
+          <p>Un algoritmo es una serie de pasos precisos para resolver un problema. Los bucles permiten repetir acciones sin escribirlas una por una.</p>
+          <p>¿Te gustó? Hay más niveles, cada uno un poco más difícil.</p>
+          <div class="challenge-success__actions">
+            <a class="button button--primary" href="../web/index.html">Siguiente misión <span aria-hidden="true">→</span></a>
+            <button class="button button--secondary" type="button" data-continue-levels>Seguir con el nivel 4 <span aria-hidden="true">→</span></button>
+            <a class="button button--secondary" href="../../index.html">Volver al inicio</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

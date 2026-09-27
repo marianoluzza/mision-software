@@ -10,12 +10,14 @@ No buscamos evaluar conocimientos previos ni dar una clase. Buscamos despertar c
 
 - Estudiantes de secundaria, con niveles muy diversos de familiaridad con programación.
 - Uso desde el celular personal, mediante código QR.
-- Visita al stand de pocos minutos, generalmente en un ambiente ruidoso y con conectividad variable.
+- Visita al stand de duración variable, generalmente en un ambiente ruidoso y con conectividad variable: quien se aburre sigue con otro desafío, otro stand u otra actividad; a quien le gusta, se queda jugando.
 - Debe poder jugarse de forma individual; acompañantes o docentes pueden mirar sin necesidad de intervenir.
 
 ## Promesa de experiencia
 
-En menos de dos minutos, una persona entiende el objetivo, toma decisiones, ve una consecuencia y descubre qué concepto de Software acaba de usar.
+En menos de dos minutos, una persona entiende el objetivo, toma decisiones, ve una consecuencia y descubre qué concepto de Software acaba de usar. Ese es el primer cierre de cada desafío, y ahí gana su insignia.
+
+Después, quien quiera puede seguir: cada nivel suma una idea nueva o un poco más de dificultad. El tiempo no es un límite; lo que importa es que irse en cualquier momento se sienta como terminar, no como abandonar.
 
 La interfaz debe ser amable, directa y visual. El texto explica lo indispensable; las acciones enseñan el resto.
 
@@ -24,7 +26,7 @@ La interfaz debe ser amable, directa y visual. El texto explica lo indispensable
 Una web estática, responsive y liviana con:
 
 1. Una portada que permite elegir desafío.
-2. Tres microjuegos independientes.
+2. Tres desafíos independientes para empezar, con lugar para sumar más.
 3. Una pantalla final por desafío con explicación corta y conexión con la carrera.
 4. Insignias guardadas localmente para quien complete los tres retos.
 5. Una pantalla final de “Misión completada” que invite a acercarse al equipo de la carrera.
@@ -37,9 +39,11 @@ No incluye registro, ranking público, chat, analytics con datos personales, log
 
 **Idea que comunica:** un programa es una secuencia precisa de instrucciones; los bucles ayudan a resolver repeticiones.
 
-**Mecánica:** completar una pequeña lista de instrucciones —avanzar, girar y repetir— para llevar un robot hasta su meta en una grilla corta.
+**Mecánica:** armar un programa con avanzar, girar y un bloque **Repetir** (cantidad ajustable y una o varias instrucciones adentro) para llevar un robot hasta su meta. Un límite de espacios obliga a usar el bucle en vez de escribir cada paso.
 
-**Duración objetivo:** 60–90 segundos.
+**Niveles:** secuencia → giros → bucle simple donde la cantidad importa → bucle con un patrón de varias instrucciones → instrucciones antes, dentro y después del bucle. El tablero crece de 4×4 a 6×6.
+
+**Duración objetivo:** primer cierre (insignia, nivel 3) en 60–120 segundos; los niveles siguientes son opcionales.
 
 **Cierre:** “Acabas de crear un algoritmo: una serie de pasos para resolver un problema.”
 
@@ -49,7 +53,7 @@ No incluye registro, ranking público, chat, analytics con datos personales, log
 
 **Mecánica:** elegir qué recursos debe priorizar un navegador para lograr que una página sea útil y cargue rápido. La interfaz muestra la página armándose y da retroalimentación de la decisión.
 
-**Duración objetivo:** 60–120 segundos.
+**Duración objetivo:** primer cierre en 60–120 segundos; puede crecer con niveles opcionales.
 
 **Cierre:** “Diseñar software también implica decidir qué llega primero y cómo se siente una experiencia.”
 
@@ -59,7 +63,7 @@ No incluye registro, ranking público, chat, analytics con datos personales, log
 
 **Mecánica:** una secuencia breve de situaciones: detectar un mensaje sospechoso, fortalecer una contraseña y activar segundo factor.
 
-**Duración objetivo:** 60–90 segundos.
+**Duración objetivo:** primer cierre en 60–90 segundos; puede crecer con niveles opcionales.
 
 **Cierre:** “La ciberseguridad protege a las personas, sus datos y los sistemas que usan todos los días.”
 
@@ -69,6 +73,7 @@ No incluye registro, ranking público, chat, analytics con datos personales, log
 - **Cero fricción:** sin instalación, cuenta ni permiso especial.
 - **Resultado inmediato:** cada decisión debe tener una reacción visible, no sólo una respuesta correcta o incorrecta.
 - **No punitivo:** el error es parte del juego; siempre debe poder reintentarse rápido.
+- **Profundidad opcional:** primero un cierre rápido y satisfactorio; después, niveles que suben la dificultad de a un paso para quien quiera seguir.
 - **Accesible:** tipografía legible, contraste suficiente, contenido navegable por teclado y sin depender sólo del color.
 - **Liviano:** primera carga ideal menor a 2 MB; sin videos pesados ni fuentes remotas imprescindibles.
 - **Compartible:** cada final debe ser claro en una captura de pantalla, pero sin exigir compartirla.
@@ -121,10 +126,11 @@ Las insignias y el progreso se guardan únicamente con `localStorage` en el disp
 ### Fase 2 — Juego del robot
 
 - Construir grilla, comandos y animación de ejecución.
-- Diseñar tres niveles cortos con dificultad gradual.
+- Diseñar niveles con dificultad creciente: la insignia se gana al usar el primer bucle y los niveles siguientes profundizan.
+- Implementar un bloque Repetir real: cantidad ajustable y cuerpo de una o varias instrucciones.
 - Probar que se entienda sin instrucciones largas.
 
-**Listo cuando:** al menos cinco personas pueden completarlo sin ayuda externa en menos de dos minutos.
+**Listo cuando:** al menos cinco personas llegan a la insignia sin ayuda externa en menos de dos minutos, y quienes siguen pueden avanzar por los niveles restantes sin trabarse en la interfaz.
 
 ### Fase 3 — Dispatcher de recursos web
 
@@ -149,12 +155,12 @@ Las insignias y el progreso se guardan únicamente con `localStorage` en el disp
 - Corregir texto, tamaño de controles y tiempos.
 - Conectar el repositorio a Vercel y generar los QR.
 
-**Listo cuando:** los desafíos cargan bien en celular, el recorrido dura menos de dos minutos y el equipo del stand sabe cómo orientar a quien termina.
+**Listo cuando:** los desafíos cargan bien en celular, el primer cierre de cada uno llega en menos de dos minutos y el equipo del stand sabe cómo orientar a quien termina.
 
 ## Criterios de aceptación globales
 
 - Compatible con navegadores móviles actuales.
-- Cada desafío puede jugarse en menos de dos minutos.
+- Cada desafío llega a su primer cierre (insignia) en menos de dos minutos; los niveles posteriores son opcionales y se puede salir en cualquier momento.
 - No bloquea el flujo ante una respuesta incorrecta.
 - El botón de reinicio y el regreso a la portada están siempre disponibles.
 - No requiere conexión después de la primera carga, en la medida en que el navegador conserve los recursos en caché.
