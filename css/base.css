@@ -73,6 +73,7 @@ button {
   width: min(100% - 2rem, var(--max-width));
   min-height: 4.75rem;
   margin-inline: auto;
+  gap: 0.75rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -233,6 +234,184 @@ h2 {
   text-decoration: underline;
   text-underline-offset: 0.25rem;
   cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.share-button {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.95rem;
+  gap: 0.45rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.share-button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--lime);
+}
+
+.share-button:hover {
+  border-color: var(--lime);
+}
+
+.share-dialog {
+  width: min(100% - 2rem, 26rem);
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+}
+
+.share-dialog::backdrop {
+  background: rgba(5, 8, 18, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.share-dialog__body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  gap: 1rem;
+}
+
+.share-dialog__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share-dialog h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.share-dialog__close {
+  display: grid;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  cursor: pointer;
+}
+
+.share-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.25rem;
+  gap: 0.25rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+}
+
+.share-toggle button {
+  min-height: 2.5rem;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  background: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.share-toggle button[aria-pressed="true"] {
+  color: #11192d;
+  background: var(--lime);
+}
+
+.share-dialog__qr {
+  display: grid;
+  width: min(100%, 22rem);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  color: #11192d;
+  background: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.share-dialog__qr svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.share-dialog__qr.is-error {
+  padding: 1.5rem;
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  background: var(--surface-strong);
+}
+
+.share-dialog__url {
+  margin: 0;
+  font-weight: 800;
+  text-align: center;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.share-dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.share-dialog__actions .button {
+  flex: 1 1 10rem;
+}
+
+.share-dialog__status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--lime);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 30rem) {
+  .share-button {
+    padding: 0;
+  }
+
+  .share-button span {
+    display: none;
+  }
+}
+
+@media (max-width: 22rem) {
+  .brand {
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
 }
 
 @media (min-width: 44rem) {
