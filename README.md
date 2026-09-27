@@ -1,6 +1,6 @@
-# Misión Software · ULP
+# Misión Software
 
-Experiencias breves, lúdicas y pensadas para celular para acercar conceptos de la carrera de Software a estudiantes de secundaria durante las Jornadas de Puertas Abiertas de la ULP.
+Experiencias breves, lúdicas y pensadas para celular para acercar conceptos de la carrera de Software a estudiantes de secundaria durante jornadas de puertas abiertas universitarias.
 
 El plan de producto, prioridades y criterios de desarrollo están en [MANIFIESTO.md](MANIFIESTO.md).
 

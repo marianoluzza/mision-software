@@ -1,4 +1,4 @@
-# Manifiesto de producto — Misión Software · ULP
+# Manifiesto de producto — Misión Software
 
 ## Propósito
 
@@ -104,7 +104,7 @@ Las insignias y el progreso se guardan únicamente con `localStorage` en el disp
 
 ### Fase 0 — Identidad y contenido
 
-- Definir nombre visible, paleta y recursos de marca autorizados por la ULP.
+- Definir nombre visible, paleta y recursos de marca autorizados por cada institución anfitriona.
 - Validar los textos de cierre y llamada a la acción con docentes de la carrera.
 - Decidir QR general y códigos QR individuales por desafío.
 
