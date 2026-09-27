@@ -21,3 +21,7 @@ Al ser HTML, CSS y JavaScript sin dependencias, se podrá abrir `index.html` dir
 ## GitHub Pages
 
 El sitio también se publica automáticamente en GitHub Pages cuando hay un push a `main`. La primera vez, en el repositorio de GitHub hay que ir a **Settings > Pages** y seleccionar **GitHub Actions** como fuente de despliegue. Después de cada publicación, la URL queda visible en el resumen del workflow **Deploy to GitHub Pages**, dentro de la pestaña **Actions**.
+
+## Licencia
+
+[MIT](LICENSE): podés usar, adaptar y publicar el proyecto para tu propia institución, manteniendo el aviso de copyright.

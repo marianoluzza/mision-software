@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#101a35">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta name="description" content="Tres misiones breves para descubrir cómo se crea, mejora y protege el software.">
     <title>Misión Software</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/challenges.css">
     <script src="js/shared.js" defer></script>
+    <script src="js/feedback.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -111,11 +114,16 @@
         </div>
         <button class="text-button" type="button" data-reset-progress hidden>Reiniciar progreso</button>
       </section>
+
+      <section class="feedback-panel" aria-label="Cajón de sugerencias">
+        <p class="eyebrow">Cajón de sugerencias</p>
+        <div data-feedback-slot="portada" data-feedback-question="¿Qué te pareció Misión Software?"></div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <p>Una experiencia para descubrir la carrera de Software.</p>
-      <p>Sin cuentas · Sin datos personales</p>
+      <p>Sin cuentas · Sin datos personales · <a href="https://github.com/marianoluzza/mision-software">Mirá cómo está hecho <span aria-hidden="true">→</span></a></p>
     </footer>
   </body>
 </html>
