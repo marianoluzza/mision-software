@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/challenges.css">
     <script src="../../js/shared.js" defer></script>
+    <script src="../../js/challenges/seguridad.js" defer></script>
   </head>
   <body class="challenge-security">
     <header class="site-header">
@@ -28,23 +29,45 @@
         <section class="challenge-intro" aria-labelledby="challenge-title">
           <p class="eyebrow">Misión 03 · Ciberseguridad</p>
           <h1 id="challenge-title">Protegé una cuenta</h1>
-          <p>Un mensaje urgente puede esconder una trampa. Observá las pistas y tomá decisiones que mantengan a salvo una cuenta.</p>
-          <div class="challenge-meta"><span>Duración: 1–2 min</span><span>Dificultad: inicial</span></div>
+          <p>Alguien quiere entrar a tu cuenta de Pixa. Observá las pistas y tomá decisiones que la mantengan a salvo.</p>
+          <div class="challenge-meta"><span>5 niveles</span><span>Dificultad: creciente</span></div>
         </section>
 
-        <section class="prototype-card" data-prototype-panel tabindex="-1" aria-labelledby="prototype-title">
-          <div class="prototype-card__visual" aria-hidden="true"><span class="prototype-card__symbol">◇</span></div>
-          <h2 id="prototype-title">La mecánica llega en la próxima fase</h2>
-          <p>Este botón simula el final del desafío para probar ahora la navegación y el sistema de insignias.</p>
-          <button class="button button--primary" type="button" data-complete-challenge="seguridad">Simular misión completada</button>
+        <section class="security-game" data-prototype-panel tabindex="-1" aria-labelledby="level-title">
+          <div class="security-game__heading">
+            <div>
+              <p class="security-game__level" data-level-number>Nivel 1 de 5</p>
+              <h2 id="level-title" data-level-title>Pescá las pistas</h2>
+            </div>
+            <div class="level-dots" data-level-dots aria-label="Progreso del desafío"></div>
+          </div>
+          <p class="security-game__hint" data-level-hint>Llegó un mensaje raro. Tocá las partes que te hacen sospechar.</p>
+
+          <div class="security-stage" data-stage>
+            <div class="security-phone" data-phone>
+              <div class="security-phone__screen" data-screen></div>
+              <p class="security-phone__status" data-phone-status></p>
+            </div>
+            <div class="security-controls" data-controls></div>
+          </div>
+
+          <p class="game-feedback" data-feedback role="status" aria-live="polite"></p>
+
+          <div class="security-game__actions">
+            <button class="button button--secondary" type="button" data-retry hidden>Probar de nuevo <span aria-hidden="true">↻</span></button>
+            <button class="button button--primary" type="button" data-next-level hidden>Siguiente nivel <span aria-hidden="true">→</span></button>
+            <a class="button button--primary" href="../../index.html" data-finish-link hidden>Ver mis insignias <span aria-hidden="true">→</span></a>
+          </div>
         </section>
 
         <section class="challenge-success" data-success-panel hidden tabindex="-1" aria-labelledby="success-title">
           <p class="eyebrow">Insignia obtenida</p>
           <h2 id="success-title">¡Cuenta protegida!</h2>
           <p>La ciberseguridad protege a las personas, sus datos y los sistemas que usan todos los días. Pensar antes de actuar es una defensa muy poderosa.</p>
+          <p>¿Te gustó? Hay más niveles, cada uno un poco más difícil.</p>
           <div class="challenge-success__actions">
             <a class="button button--primary" href="../../index.html">Ver mis insignias <span aria-hidden="true">→</span></a>
+            <button class="button button--secondary" type="button" data-continue-levels>Seguir con el nivel 4 <span aria-hidden="true">→</span></button>
           </div>
         </section>
       </div>

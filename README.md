@@ -6,7 +6,7 @@ El plan de producto, prioridades y criterios de desarrollo están en [MANIFIESTO
 
 ## Estado
 
-Fase 2 en desarrollo. Ya existe un esqueleto navegable con portada, rutas para los tres desafíos e insignias guardadas en el dispositivo. **Programá un robot** cuenta con cinco niveles jugables de dificultad creciente (la insignia se gana en el tercero); los otros dos desafíos conservan finales simulados mientras se construyen sus mecánicas. La entrega es una web estática desplegable en Vercel, sin cuentas, backend ni datos personales.
+Los tres desafíos son jugables: cada uno tiene cinco niveles de dificultad creciente y la insignia se gana en el tercero. Hay portada, navegación e insignias guardadas en el dispositivo. Falta la prueba en el stand (Fase 5). La entrega es una web estática desplegable en Vercel, sin cuentas, backend ni datos personales.
 
 ## Primeros desafíos
 

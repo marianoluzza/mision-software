@@ -63,9 +63,11 @@ No incluye registro, ranking público, chat, analytics con datos personales, log
 
 **Idea que comunica:** la seguridad digital se construye con decisiones cotidianas y pensamiento crítico.
 
-**Mecánica:** una secuencia breve de situaciones: detectar un mensaje sospechoso, fortalecer una contraseña y activar segundo factor.
+**Mecánica:** un celular simulado con la cuenta de Pixa, una red social ficticia, y alguien que quiere entrar. Cada nivel es una línea de defensa y cada decisión se ve: el atacante avanza o rebota. Se usan marcas y dominios inventados, y nunca se escribe una contraseña real: todo se hace tocando fichas.
 
-**Duración objetivo:** primer cierre en 60–90 segundos; puede crecer con niveles opcionales.
+**Niveles:** encontrar las pistas de un mensaje sospechoso → armar una contraseña larga sin datos que el atacante ya conoce → activar el segundo factor cuando la contraseña ya se filtró (una pregunta secreta no alcanza) → separar trampas de avisos reales, sin desconfiar de todo → no compartir un código de verificación que te pide una amiga cuya cuenta fue robada.
+
+**Duración objetivo:** primer cierre (insignia, nivel 3) en 60–120 segundos; los niveles siguientes son opcionales.
 
 **Cierre:** “La ciberseguridad protege a las personas, sus datos y los sistemas que usan todos los días.”
 
