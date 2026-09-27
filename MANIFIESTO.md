@@ -51,9 +51,11 @@ No incluye registro, ranking público, chat, analytics con datos personales, log
 
 **Idea que comunica:** una web no aparece de golpe: el navegador solicita y organiza recursos como HTML, CSS, JavaScript, fuentes e imágenes.
 
-**Mecánica:** elegir qué recursos debe priorizar un navegador para lograr que una página sea útil y cargue rápido. La interfaz muestra la página armándose y da retroalimentación de la decisión.
+**Mecánica:** ordenar la cola de descarga de los recursos (HTML, CSS, imágenes, JavaScript, fuente, video…) para que la página sea útil antes de que se agote la paciencia de quien la visita. Un celular simulado muestra la página armándose recurso por recurso y marca el que más la demoró.
 
-**Duración objetivo:** primer cierre en 60–120 segundos; puede crecer con niveles opcionales.
+**Niveles:** el HTML va primero → lo pesado y decorativo va al final → priorizar lo que la persona necesita usar (el botón con JavaScript) → optimizar una imagen demasiado pesada → cargar al bajar lo que no se ve, cuidando los datos móviles.
+
+**Duración objetivo:** primer cierre (insignia, nivel 3) en 60–120 segundos; los niveles siguientes son opcionales.
 
 **Cierre:** “Diseñar software también implica decidir qué llega primero y cómo se siente una experiencia.”
 
@@ -96,7 +98,7 @@ Usar HTML, CSS y JavaScript nativos. El sitio debe funcionar sin un framework y 
 │   ├── shared.js              # navegación, insignias, utilidades
 │   └── challenges/
 │       ├── robot.js
-│       ├── dispatcher.js
+│       ├── web.js
 │       └── seguridad.js
 └── assets/
     ├── icons/

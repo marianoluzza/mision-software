@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/challenges.css">
     <script src="../../js/shared.js" defer></script>
+    <script src="../../js/challenges/web.js" defer></script>
   </head>
   <body class="challenge-web">
     <header class="site-header">
@@ -29,22 +30,88 @@
           <p class="eyebrow">Misión 02 · Experiencia web</p>
           <h1 id="challenge-title">Salvá una página web</h1>
           <p>Una web necesita varios recursos para aparecer. Elegí qué debe cargar primero para que sea útil incluso con una conexión lenta.</p>
-          <div class="challenge-meta"><span>Duración: 1–2 min</span><span>Dificultad: inicial</span></div>
+          <div class="challenge-meta"><span>5 niveles</span><span>Dificultad: creciente</span></div>
         </section>
 
-        <section class="prototype-card" data-prototype-panel tabindex="-1" aria-labelledby="prototype-title">
-          <div class="prototype-card__visual" aria-hidden="true"><span class="prototype-card__symbol">⌗</span></div>
-          <h2 id="prototype-title">La mecánica llega en la próxima fase</h2>
-          <p>Este botón simula el final del desafío para probar ahora la navegación y el sistema de insignias.</p>
-          <button class="button button--primary" type="button" data-complete-challenge="web">Simular misión completada</button>
+        <section class="web-game" data-prototype-panel tabindex="-1" aria-labelledby="level-title">
+          <div class="web-game__heading">
+            <div>
+              <p class="web-game__level" data-level-number>Nivel 1 de 5</p>
+              <h2 id="level-title" data-level-title>El plano primero</h2>
+            </div>
+            <div class="level-dots" data-level-dots aria-label="Progreso del desafío"></div>
+          </div>
+          <p class="web-game__hint" data-level-hint>Tocá los recursos en el orden en que el navegador debería pedirlos.</p>
+
+          <div class="web-stage" data-stage>
+            <div class="web-meters">
+              <div class="web-meter" data-patience>
+                <div class="web-meter__label">
+                  <span class="web-meter__face" data-visitor aria-hidden="true">🙂</span>
+                  <span>Paciencia</span>
+                  <strong data-clock>0,0 s</strong>
+                  <span>de <b data-patience-limit>3,5 s</b></span>
+                </div>
+                <div class="web-meter__track" aria-hidden="true"><span class="web-meter__fill"></span></div>
+              </div>
+              <div class="web-meter web-meter--data" data-data-meter hidden>
+                <div class="web-meter__label">
+                  <span class="web-meter__face" aria-hidden="true">📶</span>
+                  <span>Datos</span>
+                  <strong data-data-used>0 MB</strong>
+                  <span>de <b data-data-limit>2 MB</b></span>
+                </div>
+                <div class="web-meter__track" aria-hidden="true"><span class="web-meter__fill"></span></div>
+              </div>
+            </div>
+
+            <div class="web-phone" data-phone aria-hidden="true">
+              <div class="web-phone__screen">
+                <p class="web-phone__blank">Pantalla en blanco…</p>
+                <div class="web-page">
+                  <div class="web-page__nav"><b>Semana de Software</b> <u>Agenda</u></div>
+                  <div class="web-page__hero"><span>[imagen]</span></div>
+                  <p class="web-page__title">Creá tecnología con nosotros</p>
+                  <p class="web-page__text">Talleres, desafíos y charlas para descubrir la carrera.</p>
+                  <span class="web-page__cta">Quiero participar</span>
+                  <div class="web-page__video"></div>
+                  <div class="web-page__gallery"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <p class="web-phone__status" data-phone-status></p>
+            </div>
+          </div>
+
+          <div class="palette-heading">
+            <strong>Recursos</strong>
+            <span>Tocá en el orden en que deben cargarse</span>
+          </div>
+          <div class="resource-palette" data-palette role="group" aria-label="Agregar recursos a la cola"></div>
+
+          <div class="program-heading">
+            <strong>Cola de descarga</strong>
+            <span data-queue-count>0 de 3 recursos</span>
+          </div>
+          <ol class="load-queue" data-queue aria-label="Orden de descarga"></ol>
+
+          <p class="game-feedback" data-feedback role="status" aria-live="polite">Tocá el recurso que el navegador debería pedir primero.</p>
+
+          <div class="web-game__actions">
+            <button class="button button--primary" type="button" data-run-load>Cargar página <span aria-hidden="true">▶</span></button>
+            <button class="button button--secondary" type="button" data-clear-queue>Limpiar</button>
+            <button class="button button--primary" type="button" data-next-level hidden>Siguiente nivel <span aria-hidden="true">→</span></button>
+            <a class="button button--primary" href="../seguridad/index.html" data-finish-link hidden>Siguiente misión <span aria-hidden="true">→</span></a>
+          </div>
         </section>
 
         <section class="challenge-success" data-success-panel hidden tabindex="-1" aria-labelledby="success-title">
           <p class="eyebrow">Insignia obtenida</p>
           <h2 id="success-title">¡La página está a salvo!</h2>
           <p>Diseñar software también implica decidir qué llega primero y cómo se siente una experiencia. El navegador combina muchos recursos para construir cada página.</p>
+          <p>¿Te gustó? Hay más niveles, cada uno un poco más difícil.</p>
           <div class="challenge-success__actions">
             <a class="button button--primary" href="../seguridad/index.html">Siguiente misión <span aria-hidden="true">→</span></a>
+            <button class="button button--secondary" type="button" data-continue-levels>Seguir con el nivel 4 <span aria-hidden="true">→</span></button>
             <a class="button button--secondary" href="../../index.html">Volver al inicio</a>
           </div>
         </section>
